@@ -25,6 +25,14 @@ settings.validators.register(
 settings.validators.validate()
 
 
-@click.command()
+@click.group()
 def cli():
     pass
+
+@cli.command()
+def show():
+    pass
+
+
+if __name__ == "__main__":
+    cli()

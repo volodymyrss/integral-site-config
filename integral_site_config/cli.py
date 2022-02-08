@@ -1,16 +1,18 @@
 """Console script for integral_site_config."""
 import sys
 import click
+import integral_site_config
 
 
-@click.command()
-def main(args=None):
-    """Console script for integral_site_config."""
-    click.echo("Replace this message by putting your code into "
-               "integral_site_config.cli.main")
-    click.echo("See click documentation at https://click.palletsprojects.com/")
-    return 0
+@click.group()
+def cli():
+    pass
+
+@cli.command()
+def show():
+    for k, v in dict(integral_site_config.settings).items():
+        click.echo(f"{k:50s}: {str(v):50}")
 
 
 if __name__ == "__main__":
-    sys.exit(main())  # pragma: no cover
+    sys.exit(cli())  # pragma: no cover
