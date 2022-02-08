@@ -20,6 +20,7 @@ settings = Dynaconf(
 settings.validators.register(
     Validator("REP_BASE_PROD", must_exist=True),
     Validator("IC_BASE", must_exist=True)
+    Validator("IC_COLLECTION", must_exist=False)
 )
 
 settings.validators.validate()

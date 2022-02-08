@@ -29,11 +29,6 @@ setup(
         'Programming Language :: Python :: 3.8',
     ],
     description="Configuration for INTEGRAL site",
-    entry_points={
-        'console_scripts': [
-            'integral_site_config=integral_site_config.cli:main',
-        ],
-    },
     install_requires=requirements,
     license="MIT license",
     long_description=readme + '\n\n' + history,
